@@ -1,12 +1,15 @@
 import { Square } from "../square/square";
 import { FC } from "react";
 
-export const BoardRow: FC<Element> = () => {
+interface BoardRow {
+  boardRaw: boolean;
+}
+export const BoardRow: FC<BoardRow> = () => {
   return (
     <div className="board-row">
-      <Square />
-      <Square />
-      <Square />
+      <Square square={true} />
+      <Square square={true} />
+      <Square square={true} />
     </div>
   );
 };

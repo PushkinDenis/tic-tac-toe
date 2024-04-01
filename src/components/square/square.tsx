@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
-
-export const Square: FC<HTMLButtonElement> = () => {
+interface Square {
+  square: boolean;
+}
+export const Square: FC<Square> = () => {
   const [value, setValue] = useState<string | null>(null);
   function handleClick() {
     setValue("X");

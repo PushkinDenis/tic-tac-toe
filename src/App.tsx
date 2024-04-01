@@ -1,11 +1,15 @@
 import { BoardRow } from "./components/board-row/board-row";
+import { FC } from "react";
 
-export const App = () => {
+interface App {
+  app: boolean;
+}
+export const App: FC<App> = () => {
   return (
     <>
-      <BoardRow firstValue="1" secondValue="2" thirdValue="3" />
-      <BoardRow firstValue="4" secondValue="5" thirdValue="6" />
-      <BoardRow firstValue="7" secondValue="8" thirdValue="9" />
+      <BoardRow boardRaw={true} />
+      <BoardRow boardRaw={true} />
+      <BoardRow boardRaw={true} />
     </>
   );
 };
