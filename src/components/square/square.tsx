@@ -1,12 +1,12 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
-export interface SquareProps {
-  value: string;
-}
-
-export const Square: FC<SquareProps> = ({ value }: SquareProps) => {
+export const Square: FC<HTMLButtonElement> = () => {
+  const [value, setValue] = useState<string | null>(null);
+  function handleClick() {
+    setValue("X");
+  }
   return (
-    <button type="button" className="square">
+    <button type="button" className="square" onClick={handleClick}>
       {value}
     </button>
   );
