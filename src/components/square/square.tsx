@@ -1,14 +1,13 @@
-import { FC, useState } from "react";
-interface Square {
-  square: boolean;
+import { FC } from "react";
+
+export interface SquareProps {
+  value: string | null;
+  onSquareClick: () => void;
 }
-export const Square: FC<Square> = () => {
-  const [value, setValue] = useState<string | null>(null);
-  function handleClick() {
-    setValue("X");
-  }
+
+export const Square: FC<SquareProps> = ({ value, onSquareClick }: SquareProps) => {
   return (
-    <button type="button" className="square" onClick={handleClick}>
+    <button type="button" className="square" onClick={onSquareClick}>
       {value}
     </button>
   );

@@ -1,15 +1,10 @@
-import { BoardRow } from "./components/board-row/board-row";
+import { Board } from "./components/board/board.tsx";
 import { FC } from "react";
 
-interface App {
-  app: boolean;
-}
-export const App: FC<App> = () => {
+export const App: FC = () => {
   return (
     <>
-      <BoardRow boardRaw={true} />
-      <BoardRow boardRaw={true} />
-      <BoardRow boardRaw={true} />
+      <Board />
     </>
   );
 };
